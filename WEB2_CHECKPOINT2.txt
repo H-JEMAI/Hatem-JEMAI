@@ -1,0 +1,91 @@
+
+
+
+ index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+
+
+
+  <title>React App</title>
+  </head>
+  <body>
+   
+    <div id="root"></div>
+
+  </body>
+ </html>
+
+_________________________________________________________________________________
+
+
+ my style.module.css
+
+
+
+.Mystyle {
+
+    border:solid 1px black;
+    max-width:100vw ;
+  }
+  
+  .Title {
+    color : red;
+  }
+
+
+__________________________________________________________________________________
+
+app.js
+
+
+
+class Style extends React.Component {
+  
+  render() {
+    return 
+    
+    <h1 style={Title}> My title </h1>;
+    <img src= "./src/logo.svg"></img>
+    
+    <img src="./public/logo192.png"></img>
+
+  }
+}
+ export default Title 
+
+
+__________________________________________________________________________________
+
+
+ index.js
+
+
+import Title from './App.js'
+
+import Style from './mystyle.module.css'; 
+import Title from './mystyle.module.css'; 
+
+ ReactDOM.render(<Title />, document.getElementById('root'));
+
+
+_________________________________________________________________________________
+
+
