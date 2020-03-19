@@ -1,0 +1,199 @@
+------------------------------------------------------------------------------------
+Container.js
+
+
+import React from 'react';
+
+function Container () {
+
+let name ="world"
+
+return ( 
+      <h1>Hello {"name"}</h1>
+     )
+
+
+export default Container
+
+MyComponent1.js
+
+
+import React from 'react';
+
+function MyComponent1 () {
+
+let name ="world"
+
+return ( 
+      <h1>Hello {"name"}</h1>
+     )
+
+
+export default MyComponent1
+
+
+MyComponent2.js
+
+
+import React from 'react';
+
+function MyComponent2 () {
+
+let name ="world"
+
+return ( 
+      <h1>Hello {"name"}</h1>
+     )
+
+
+export default MyComponent2
+
+
+MyListItem.js
+
+
+import React from 'react';
+
+function MyListItem () {
+
+let name ="world"
+
+return ( 
+      <h1>Hello {"name"}</h1>
+     )
+
+
+export default MyListItem
+
+
+-----------------------------------------------------------------------------------------------
+
+////////////////////////////////
+
+MyComponent.js
+
+
+import React from 'react';
+
+function MyComponent () {
+
+let name ="world"
+
+return ( 
+      <h1>Hello {"name"}</h1>
+     )
+
+
+export default MyComponent
+
+//////////////////////////////
+App.js
+
+import React from 'react';
+
+function App. () {
+
+
+
+return ( 
+      <div className="App"><MyComponent/></div>
+     )
+
+
+export default App ;
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+LIST ITEMS
+
+src/App.js
+import React, { Component } from 'react';
+import './App.css';
+const list = [
+{
+title: 'IA',
+url: 'https://ada.gomycode.tn',
+author: 'GoMyCode0',
+num_comments: 8,
+points: 12,
+objectID: 0,
+},
+{
+title: 'WEB2',
+url: 'https://ada.gomycode.tn',
+author: 'GoMyCode1',
+num_comments: 16,
+points: 22,
+objectID: 1,
+},
+];
+class App extends Component {
+...
+}
+
+
+
+
+src/App.js
+class App extends Component {
+render() {
+return (
+<div className="App">
+{list.map(function(item) {
+return <div>{item.title}</div>;
+})}
+</div>
+);
+}
+}
+export default App;
+
+
+
+src/App.js
+class App extends Component {
+render() {
+return (
+<div className="App">
+{list.map(function(item) {
+return (
+<div>
+<span>
+<a href={item.url}>{item.title}</a>
+</span>
+<span>{item.author}</span>
+<span>{item.num_comments}</span>
+<span>{item.points}</span>
+</div>
+);
+})}
+</div>
+);
+}
+
+
+
+
+
+
+
+
+
+src/App.js
+{list.map(function(item) {
+return (
+<div key={item.objectID}>
+<span>
+<a href={item.url}>{item.title}</a>
+</span>
+<span>{item.author}</span>
+<span>{item.num_comments}</span>
+<span>{item.points}</span>
+</div>
+);
+})}
