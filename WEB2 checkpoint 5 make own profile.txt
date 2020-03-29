@@ -1,0 +1,66 @@
+checkpoint 5 make own profile
+
+//////////////////////////
+
+ profile.js 
+
+import React from 'react';
+import img from './image.png';
+
+const profile =() =>
+{
+    const profile =
+    {
+        photo: img,
+        name:{firstName:"Hatem", 
+        lastName:"Jemai"},
+        profileLink:"/https://www.facebook.com/"
+
+
+    }
+  return (
+  <div>  
+<p>{profile.name.firstName}</p>
+<p>{profile.name.lastName}</p>
+<img src={profile.photo} alt="4"/>
+<button style={{width:"200px",height:"200px",backgroundColor:"red"}}
+ onClick={()=>{window.location.replace(profile.profileLink)}}>
+  LinkButton</button>
+   
+  </div>
+
+  );
+  
+  }
+
+
+export default profile;
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+
+App.js
+
+import React from 'react';
+import Profile from './Component/profile'
+
+function App() {
+  return (
+    <div className="profile">
+    <Profile />
+   </div>
+  );
+}
+
+export default App;
+
+////////////////////////////////////////////////////
+
+
+
+
+
+
+
