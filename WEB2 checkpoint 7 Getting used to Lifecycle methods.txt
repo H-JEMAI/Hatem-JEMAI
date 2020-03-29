@@ -1,0 +1,54 @@
+
+WEB 2 CHECKPOINT 7 _Getting used to Lifecycle methods Checkpoint
+
+/////////////////////////////////////////////////////////////////////
+
+
+
+App.js
+
+
+
+import React from 'react';
+
+import ImprovedButton from './ImprovedButton';
+
+function App() {
+  return (
+<div className="App">
+ <ImprovedButton onClick={()=> window.location="https://fb.com/"}> MyFacebook </ImprovedButton>
+</div>
+  );
+}
+
+export default App;
+
+
+/////////////////////////////////////////
+
+ImprovedButtom.js
+
+
+import React from 'react';
+
+
+class  ImprovedButton extends React.Component{
+   componentDidMount(){
+       setTimeout(function(){ alert("Hello"); }, 2000); 
+    }
+
+    componentWillMount(){
+        alert("Goodbye")
+    }
+
+    render (){
+        return
+        <button onClick={this.props.onClick}>
+        {this.props.children}
+        </button>
+    }
+}
+
+ export default ImprovedButton;
+
+//////////////////////////////////////////
