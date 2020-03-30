@@ -1,0 +1,59 @@
+
+WEB 2 CHECKPOINT 8.1_Getting used to state
+
+/////////////////////////////////////////////////////////////////////
+
+
+
+App.js
+
+
+import React from 'react';
+import './App.css';
+
+import one from '../src/Myimage/photo1.jpg'
+import two from '../src/Myimage/photo2.jpg'
+import three from '../src/Myimage/photo3.jpg'
+
+
+class App extends React.Component {
+state= {
+      Img:one,
+      Name:'person1',
+      Description:'person1 doesnt exist'
+}
+
+  render(){
+    return (<>
+    <button onClick={()=>{this.setState({
+      Img:one,
+      Name:'person1',
+      Description:'person1 doesnt exist'
+       })}}>avatar1</button>
+    <button onClick={()=>{this.setState({
+     Img:two ,
+     Name:'person2',
+     Description:'person2 doesnt exist too'
+    })}}>harold</button>
+    <button onClick={()=>{this.setState({
+      Img:three,
+      Name:'person3',
+      Description:'person3 another one that doesnt exist'
+    })}}></button>
+    <div>
+     <h1>{this.state.Name}</h1>
+     <img style={{width:"200px"}} src={this.state.Img}></img>
+     <p>{this.state.Description}</p>
+
+</div>
+    </>
+      );
+  }
+  
+}
+
+export default App;
+
+//////////////////////////////////////////
+
+
