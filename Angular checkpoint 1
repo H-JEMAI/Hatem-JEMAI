@@ -1,0 +1,75 @@
+
+
+first.component.html
+-------------------------------------
+
+<p> first works !</p>
+<h1>Angular chekpoint 1</h1>
+
+
+
+<div [style.background-color] = color >
+  <h2>
+  This is a heading in a div element</h2>
+  <p>
+  This is a heading in a div element
+  </p>
+</div>
+
+
+<input
+ #myinputdivcolor
+
+ type="text "
+ class="form-control"
+ [value]="color">
+
+<button
+(click) = "changeColor(myinputdivcolor.value)"
+
+class= btn btn-primary>
+--> valid your input new Div color
+</button>
+
+<br>
+<br>
+
+<button
+
+(click) = "changeColor(color= defaultColor)"
+
+class= btn btn-primary>
+ click this buttom to resume the default Div color .
+</button>
+
+
+
+
+
+first.component.ts
+
+
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-first',
+  templateUrl: './first.component.html',
+  styleUrls: ['./first.component.css']
+})
+export class FirstComponent implements OnInit {
+
+
+  color = "yellow"
+  defaultColor = "yellow"
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  changeColor(newColor) {
+    this.color = newColor;
+}
+}
+
+
+
